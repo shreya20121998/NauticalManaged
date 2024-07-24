@@ -1,0 +1,25 @@
+
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">  
+    <SelectDialog
+        id="mySeleclog1"
+        noDataText="Loading..."
+        title="Select Purchase Org"
+       search="onPurchaseOrgSearch"
+        confirm="onPurchaseOrgValueHelpClose"
+        cancel="onPurchaseOrgValueHelpClose"
+        items="{/xNAUTIxCHARTPURCHASEITEM}"
+       initialFocus="SearchField"
+       liveChange="onPurchaseOrgSearch"
+        >
+        <StandardListItem id="ardListItem2"
+       
+            title="{Ekorg}"
+            description="{Ekotx}"
+       
+            iconDensityAware="false"
+            iconInset="false"
+            type="Active" />
+    </SelectDialog>
+</core:FragmentDefinition>

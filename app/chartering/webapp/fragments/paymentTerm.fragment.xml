@@ -1,0 +1,26 @@
+
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">  
+    <SelectDialog
+        id="mySel"
+        noDataText="Loading..."
+        title="Select Payment Term"
+       search="onPaymentTermSearch"
+        confirm="onPaymentTermValueHelpClose"
+        cancel="onPaymentTermValueHelpClose"
+        items="{/xNAUTIxpaymTerm}"
+        initialFocus="SearchField"
+        liveChange="onPaymentTermSearch"
+       
+        >
+        <StandardListItem id="ardLi"
+       
+            title="{Paytrm}"
+            description="{Paytrmtxt}"
+       
+            iconDensityAware="false"
+            iconInset="false"
+            type="Active" />
+    </SelectDialog>
+</core:FragmentDefinition>

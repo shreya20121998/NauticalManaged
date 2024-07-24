@@ -1,0 +1,28 @@
+
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">  
+    <SelectDialog
+        id="mySect"
+        noDataText="Loading..."
+        title="Select Purchase Group"
+       search="onApproverSearch"
+        confirm="onApproverClose"
+        cancel="onApproverClose"
+         initialFocus="SearchField"
+        items="{filteredUsersModel>/}"
+       
+        >
+        <StandardListItem id="_IDGenSnd"
+       
+            title="{filteredUsersModel>Zuser}"
+            description="{filteredUsersModel>Zgroup}"
+
+           
+         
+       
+            iconDensityAware="false"
+            iconInset="false"
+            type="Active" />
+    </SelectDialog>
+</core:FragmentDefinition>

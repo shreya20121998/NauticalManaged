@@ -1,0 +1,74 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:form="sap.ui.layout.form"
+    xmlns:core="sap.ui.core"
+    xmlns:l="sap.ui.layout">
+    <Dialog id="_IDGenDialog1"  title="Email Details" class="sapUiSmallMargin" contentHeight="40%" contentWidth="60%">
+
+     
+    
+      <Panel id="ui">
+      <Panel>
+            <FlexBox class="flex">
+                <VBox class="flex" alignItems="End">
+                   <FlexBox >
+                        <Label class="sapUiTinyMarginTop" text="Voyage Type :" />
+                        <Input value="{storedDataModel>/voyageType}" editable="false" />
+                    </FlexBox> 
+                    <FlexBox >
+                        <Label class="sapUiTinyMarginTop" text="Vessel Type :" />
+                        <Input value="{storedDataModel>/vesselType}" editable="false" />
+                    </FlexBox>
+                    
+                    <FlexBox >
+                        <Label class="sapUiTinyMarginTop" text="Cargo Unit : " />
+                        <Input value="{= ${storedDataModel>/cargoSize} + ' ' + ${storedDataModel>/cargoUnit} }" editable="false" />
+                    </FlexBox>
+                    <FlexBox >
+                        <Label class="sapUiTinyMarginTop" text="Vendor Code :" />
+                        <Input value="{storedDataModel>/vendorString}" editable="false" />
+                    </FlexBox>
+                      </VBox>
+                    
+                    <VBox class="flex" alignItems="End" >
+                    
+                    <FlexBox >
+                        <Label class="sapUiTinyMarginTop" text="Start Port: " />
+                        <Input value="{storedDataModel>/startPort}" editable="false" />
+                    </FlexBox>
+                    <FlexBox >
+                        <Label class="sapUiTinyMarginTop" text="End Port :" />
+                        <Input value="{= ${storedDataModel>/midPort} + ' ' + ${storedDataModel>/endPort} }" editable="false" />
+                    </FlexBox>
+                    
+                    <FlexBox >
+                        <Label class="sapUiTinyMarginTop" text="Bidding Start Date Time : " />
+                        <Input value="{storedDataModel>/obidStartD}" editable="false" />
+                    </FlexBox>
+                    <FlexBox >
+                        <Label class="sapUiTinyMarginTop" text="Bidding End Date Time :" />
+                        <Input value="{storedDataModel>/obidEndD}" editable="false"  />
+                    </FlexBox>
+                    
+              
+               
+                
+                
+                </VBox>
+
+                
+            </FlexBox>
+        </Panel>
+     
+       
+     </Panel>
+
+         <footer>
+        	<OverflowToolbar id="_IDGenOverflowToolbar1" >	
+                <ToolbarSpacer id="_IDGenToolbarSpacer1"/>		
+				<Button id="_IDGenButton1" type="Accept" text="Send Email" press="onSendEmail">
+				</Button>
+                <Button id="_IDGenButton2" type="Reject" text="Cancel" press="oncancell">
+				</Button>
+			</OverflowToolbar>
+        </footer>
+    </Dialog>
+</core:FragmentDefinition>   

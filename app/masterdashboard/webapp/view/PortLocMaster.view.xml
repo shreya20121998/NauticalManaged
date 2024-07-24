@@ -1,0 +1,399 @@
+<mvc:View
+    xmlns:core="sap.ui.core"
+    controllerName="com.ingenx.nauti.masterdashboard.controller.PortLocMaster"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+    <Page id="page">
+        <headerContent>
+            <Bar id="_IDGenBar2">
+                <contentLeft>
+                    <Button
+                        id="_IDGenIcon1"
+                        icon="sap-icon://nav-back"
+                        press="onBackPress"
+                    />
+
+                    <Button
+                        id="_IDGenIcon2"
+                        icon="sap-icon://home"
+                        press="onPressHome"
+                    />
+
+                    <Text
+                        id="_IDGenText1"
+                        class="text1"
+                        text="Port Location Master"
+                    />
+                </contentLeft>
+                <contentRight>
+                    <SearchField
+                        id="searchField"
+                        width="300px"
+                        search="onSearch"
+                        placeholder="Search..."
+                        liveChange="onSearch"
+                        
+                    />
+                </contentRight>
+            </Bar>
+        </headerContent>
+
+        <Panel id="_IDGenPanel1" class="tablepanel">
+            <Bar
+                id="_IDGenBar12"
+                class="headerBar2"
+            >
+                <contentLeft>
+                    <!-- <Button
+                        id="entryBtn"
+                        text="New Entries" type="Emphasized"
+                        press="newEntries"
+                    /> -->
+
+                    <!-- <Button id="copyBtn" text="Copy As" press="pressCopy"/> -->
+                    <!-- <Button
+                        id="saveBtn"
+                        text="Save" type="Emphasized"
+                        press="onSave"
+                    /> -->
+
+                    <!-- <Button
+                        id="editBtn"
+                        text="Edit" type="Emphasized"
+                        press="pressEdit"
+                    /> -->
+
+                    <!-- <Button
+                        id="deleteBtn"
+                        text="Delete" type="Emphasized"
+                        press="onDeletePress"
+                    /> -->
+                </contentLeft>
+            </Bar>
+
+            <ScrollContainer
+                id="scrollContainer"
+                height="calc(100% - 50px)"
+                vertical="true"
+                class="scrollContainer"
+            >
+                <Table
+                    id="createTypeTable"
+                    width="100%"
+                    class="mastertables"
+                    items="{dataModel>/}"
+                    updateFinished="onTableUpdateFinished"
+                    mode="MultiSelect"
+                    sticky="ColumnHeaders"
+                    selectionChange="selectedItems"
+                    noDataText="Loading...."
+                    growing="true"
+                    growingThreshold="500"
+                  >
+                    <columns>
+                        <Column id="_IDGenColumn1">
+                            <Label id="_IDGenLabel1" text="Country" />
+                        </Column>
+
+                        <Column id="_IDGenColumn2">
+                            <Label id="_IDGenLabel2" text="Port Code" />
+                        </Column>
+
+                        <Column id="_IDGenColumn3">
+                            <Label id="_IDGenLabel3" text="Port Name" />
+                        </Column>
+
+                        <Column id="_IDGenColumn4" width="10rem">
+                            <Label id="_IDGenLabel4" text="Related Anchorage" />
+                        </Column>
+
+                        <Column id="_IDGenColumn5">
+                            <Label id="_IDGenLabel5" text="Latitude" />
+                        </Column>
+
+                        <Column id="_IDGenColumn6">
+                            <Label id="_IDGenLabel6" text="Longitude" />
+                        </Column>
+
+                        <Column id="_IDGenColumn7" width="13rem">
+                            <Label id="_IDGenLabel7" text="Country Name" />
+                        </Column>
+
+                        <Column id="_IDGenColumn8">
+                            <Label id="_IDGenLabel8" text="Location ID" />
+                        </Column>
+
+                        <Column id="_IDGenColumn9">
+                            <Label id="_IDGenLabel9" text="Indicator" />
+                        </Column>
+                    </columns>
+
+                    <ColumnListItem id="_istItem1">
+                        <cells>
+                            <Text
+                                id="_IDGenText3"
+                                text="{dataModel>Country}"
+                            />
+
+                            <Text
+                                id="_IDGenText4"
+                                text="{dataModel>Portc}"
+                            />
+
+                            <Text
+                                id="_IDGenText5"
+                                text="{dataModel>Portn}"
+                            />
+
+                            <Text
+                                id="_IDGenText6"
+                                text="{dataModel>Reancho}"
+                            />
+
+                            <Text
+                                id="_IDGenText7"
+                                text="{dataModel>Latitude}"
+                            />
+
+                            <Text
+                                id="_IDGenText8"
+                                text="{dataModel>Longitude}"
+                            />
+
+                            <Text
+                                id="_IDGenText9"
+                                text="{dataModel>Countryn}"
+                            />
+
+                            <Text
+                                id="_IDGenText10"
+                                text="{dataModel>Locid}"
+                            />
+
+                            <CheckBox id="_IDGenCheckBox1" selected="{dataModel>Ind}" select="onIndSelect" />
+                        </cells>
+                    </ColumnListItem>
+                </Table>
+            </ScrollContainer>
+        </Panel>
+
+        <Table
+            id="entryTypeTable"
+            selectionChange="selectedItems"
+            updateFinished="onTableUpdateFinished"
+            width="100%"
+            class="tablepanel entrytables"
+            visible="false"
+            mode="MultiSelect"
+        >
+            <columns>
+                <Column id="_IDGenColumn10">
+                    <Label id="_IDGenLabel10" text="Country" />
+                </Column>
+
+                <Column id="_IDGenColumn11">
+                    <Label id="_IDGenLabel11" text="Port Code" />
+                </Column>
+
+                <Column id="_IDGenColumn12">
+                    <Label id="_IDGenLabel12" text="Port Name" />
+                </Column>
+
+                <Column id="_IDGenColumn13">
+                    <Label id="_IDGenLabel13" text="Related Anchorage" />
+                </Column>
+
+                <Column id="_IDGenColumn14">
+                    <Label id="_IDGenLabel14" text="Latitude" />
+                </Column>
+
+                <Column id="_IDGenColumn15">
+                    <Label id="_IDGenLabel15" text="Longitude" />
+                </Column>
+
+                <Column id="_IDGenColumn16">
+                    <Label id="_IDGenLabel16" text="Country Name" />
+                </Column>
+
+                <Column id="_IDGenColumn17">
+                    <Label id="_IDGenLabel17" text="Location ID" />
+                </Column>
+
+                <Column id="_IDGenColumn18">
+                    <Label id="_IDGenLabel18" text="Ind" />
+                </Column>
+            </columns>
+
+            <ColumnListItem id="istItem1">
+                <cells>
+                    <Input id="country" />
+
+                    <Input id="portc" />
+
+                    <Input id="portn" />
+
+                    <Input id="reancho" />
+
+                    <Input id="latitude" />
+
+                    <Input id="longitude" />
+
+                    <Input id="countryn" />
+
+                    <Input id="locid" />
+
+                    <Input id="ind" />
+                </cells>
+            </ColumnListItem>
+        </Table>
+
+        <Table
+            id="updateTypeTable"
+            updateFinished="onTableUpdateFinished"
+            selectionChange="selectedItems"
+            width="100%"
+            class="tablepanel "
+            visible="false"
+            enableBusyIndicator="true"
+        >
+            <columns>
+                <Column id="_IDGenColumn19">
+                    <Label id="_IDGenLabel19" text="Country" />
+                </Column>
+
+                <Column id="_IDGenColumn20">
+                    <Label id="_IDGenLabel20" text="Port Code" />
+                </Column>
+
+                <Column id="_IDGenColumn21">
+                    <Label id="_IDGenLabel21" text="Port Name" />
+                </Column>
+
+                <Column id="_IDGenColumn22">
+                    <Label id="_IDGenLabel22" text="Related Anchorage" />
+                </Column>
+
+                <Column id="_IDGenColumn23">
+                    <Label id="_IDGenLabel23" text="Latitude" />
+                </Column>
+
+                <Column id="_IDGenColumn24">
+                    <Label id="_IDGenLabel24" text="Longitude" />
+                </Column>
+
+                <Column id="_IDGenColumn25">
+                    <Label id="_IDGenLabel25" text="Country Name" />
+                </Column>
+
+                <Column id="_IDGenColumn26">
+                    <Label id="_IDGenLabel26" text="Location ID" />
+                </Column>
+
+                <Column id="_IDGenColumn27">
+                    <Label id="_IDGenLabel27" text="Ind" />
+                </Column>
+            </columns>
+
+            <items>
+                <ColumnListItem id="stItem1">
+                    <cells>
+                        <Input
+                            id="country1"
+                            value=""
+                        />
+
+                        <Input id="portc1" />
+
+                        <Input id="portn1" />
+
+                        <Input id="reancho1" />
+
+                        <Input id="latitude1" />
+
+                        <Input id="longitude1" />
+
+                        <Input id="countryn1" />
+
+                        <Input id="locid1" />
+
+                        <Input
+                            id="ind1"
+                            editable="true"
+                        />
+                    </cells>
+                </ColumnListItem>
+            </items>
+        </Table>
+
+        <OverflowToolbar
+            id="mainPageFooter2"
+            design="Auto"
+            visible="false"
+        >
+            <ToolbarSpacer id="_IDGenToolbarSpacer4" />
+
+            <Button
+                id="mainPageSave12"
+                text="Update"
+                press="onUpdate"
+            />
+
+            <Button
+                id="_IDGenButton23"
+                text="Cancel"
+                press="onCancel"
+            />
+        </OverflowToolbar>
+
+        <!-- main page footer -->
+
+        <OverflowToolbar
+            id="mainPageFooter"
+            design="Auto"
+            visible="false"
+        >
+            <ToolbarSpacer id="_IDGenToolbarSpacer3" />
+
+            <Button
+                id="add"
+                icon="sap-icon://sys-add"
+                press=".onAddRow1"
+                text="Add Row"
+                type="Success"
+            />
+
+            <Button
+                id="minus"
+                icon="sap-icon://sys-minus"
+                press=".onDeleteRow1"
+                text="Delete Row"
+                type="Reject"
+            />
+
+            <Button
+                id="mainPageSave"
+                text="Save"
+                press="onSave"
+            />
+
+            <Button
+                id="_IDGenButton22"
+                text="Cancel"
+                press="onCancel"
+            />
+        </OverflowToolbar>
+    </Page>
+
+    <ScrollContainer
+        id="_IDGenScrollContainer1"
+        height="100%"
+        width="100%"
+        vertical="true"
+        focusable="true"
+    >
+        <!--this is first page-->
+    </ScrollContainer>
+</mvc:View>

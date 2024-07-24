@@ -1,0 +1,74 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+    <Dialog title="Vendor Details" class="sapUiSmallMargin" contentHeight="250px" contentWidth="50%">
+        <Panel>
+            <FlexBox class="flex">
+                <VBox class="flex" alignItems="Start">
+                    <FlexBox class="headerItem" direction="Row" justifyContent="SpaceBetween">
+                        <Label class="labelStyle" text="Vendor No :" />
+                        <Input class="inputStyle" value="{myModel>/0/Lifnr}" editable="false" />
+                    </FlexBox>
+                    <FlexBox class="headerItem" direction="Row" justifyContent="SpaceBetween">
+                        <Label class="labelStyle" text="Title :" />
+                        <Input class="inputStyle" value="{myModel>/0/Anred}" editable="false" />
+                    </FlexBox>
+                    <FlexBox class="headerItem" direction="Row" justifyContent="SpaceBetween">
+                        <Label class="labelStyle" text="Name1 :" />
+                        <Input class="inputStyle" value="{myModel>/0/Name1}" editable="false" />
+                    </FlexBox>
+                    <FlexBox class="headerItem" direction="Row" justifyContent="SpaceBetween">
+                        <Label class="labelStyle" text="Name2 :" />
+                        <Input class="inputStyle" value="{myModel>/0/Name2}" editable="false" />
+                    </FlexBox>
+                    <FlexBox class="headerItem" direction="Row" justifyContent="SpaceBetween">
+                        <Label class="labelStyle" text="Telephone :" />
+                        <Input class="inputStyle" value="{myModel>/0/Telf2}" editable="false" />
+                    </FlexBox>
+                    <FlexBox class="headerItem" direction="Row" justifyContent="SpaceBetween">
+                        <Label class="labelStyle" text="Fax No:" />
+                        <Input class="inputStyle" value="{myModel>/0/Telfx}" editable="false" />
+                    </FlexBox>
+                    <FlexBox class="headerItem" direction="Row" justifyContent="SpaceBetween">
+                        <Label class="labelStyle" text="Language :" />
+                        <Input class="inputStyle" value="{myModel>/0/Spras}" editable="false" />
+                    </FlexBox>
+                    <!-- Add other FlexBoxes and Inputs here -->
+                </VBox>
+
+                <VBox class="flex" alignItems="Start">
+                    <FlexBox class="headerItem" direction="Row" justifyContent="SpaceBetween">
+                        <Label class="labelStyle" text="Address :" />
+                        <Input class="inputStyle" value="{myModel>/0/Adrnr}" editable="false" />
+                    </FlexBox>
+                    <FlexBox class="headerItem" direction="Row" justifyContent="SpaceBetween">
+                        <Label class="labelStyle" text="Street :" />
+                        <Input class="inputStyle" value="{myModel>/0/Stras}" editable="false" />
+                    </FlexBox>
+                    <FlexBox class="headerItem" direction="Row" justifyContent="SpaceBetween">
+                        <Label class="labelStyle" text="City :" />
+                        <Input class="inputStyle" value="{myModel>/0/Ort01}" editable="false" />
+                    </FlexBox>
+                    <FlexBox class="headerItem" direction="Row" justifyContent="SpaceBetween">
+                        <Label class="labelStyle" text="Country :" />
+                        <Input class="inputStyle" value="{myModel>/0/Land1}" editable="false" />
+                    </FlexBox>
+                    <FlexBox class="headerItem" direction="Row" justifyContent="SpaceBetween">
+                        <Label class="labelStyle" text="Postal Code:" />
+                        <Input class="inputStyle" value="{myModel>/0/Pstlz}" editable="false" />
+                    </FlexBox>
+                    <FlexBox class="headerItem" direction="Row" justifyContent="SpaceBetween">
+                        <Label class="labelStyle" text="Region :" />
+                        <Input class="inputStyle" value="{myModel>/0/Regio}" editable="false" />
+                    </FlexBox>
+                    <!-- Add other FlexBoxes and Inputs here -->
+                </VBox>
+            </FlexBox>
+        </Panel>
+
+        <footer>
+            <OverflowToolbar>
+                <ToolbarSpacer />
+                <Button text="Close" press="oncancell" />
+            </OverflowToolbar>
+        </footer>
+    </Dialog>
+</core:FragmentDefinition>

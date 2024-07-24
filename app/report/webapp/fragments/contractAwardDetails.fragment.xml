@@ -1,0 +1,133 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:form="sap.ui.layout.form"
+    xmlns:core="sap.ui.core"
+    xmlns:m="sap.m.Dialog"
+    xmlns:l="sap.ui.layout">
+    <Dialog id="_IDDialog"  title="Contract Award Detail" class="sapUiSmallMargin" contentHeight="250px" contentWidth="50%" >
+
+         <Panel >
+            <FlexBox  class="flex" >
+                <VBox  class="flex" alignItems="Start" >
+
+                    <FlexBox  class="headerItem" direction="Row" justifyContent="SpaceBetween">
+                        <Label
+                         
+                            class="labelStyle"
+                            text="Done By Ve:"
+                        />
+                        <Input
+                            class="inputStyle"
+                            value="{contractAwardReport1>/0/DoneBy}"
+                            editable="false"
+                        />
+                    </FlexBox>
+
+                    <FlexBox  class="headerItem" direction="Row" justifyContent="SpaceBetween">
+                        <Label
+                            
+                            class="labelStyle"
+                            text="Created By : "
+                        />
+                        <Input
+                            class="inputStyle"
+                            value="{contractAwardReport1>/0/Lifnr}"
+                            editable="false"
+                        />
+                    </FlexBox>
+
+                    <FlexBox class="headerItem" direction="Row" justifyContent="SpaceBetween">
+                        <Label
+                            
+                            class="labelStyle"
+                            text="Status : "
+                        />
+                        <Input
+                            class="inputStyle"
+                            value="{contractAwardReport1>/0/Stat}"
+                            editable="false"
+                        />
+                    </FlexBox>
+
+                    <FlexBox class="headerItem" direction="Row" justifyContent="SpaceBetween">
+                        <Label
+                            
+                            class="labelStyle"
+                            text="Type(Auto):"
+                        />
+                        <Input
+                            class="inputStyle"
+                            value="{contractAwardReport1>/0/Zmode}"
+                            editable="false"
+                        />
+                    </FlexBox>
+
+                   
+                    
+                </VBox>
+
+                <VBox id="_IDGenVBox2" class="flex" alignItems="Start">
+                 <FlexBox id="_IDGenFlexBox6" class="headerItem" direction="Row" justifyContent="SpaceBetween">
+                        <Label
+                            
+                            class="labelStyle"
+                            text="Comments: "
+                        />
+                        <Input
+                            class="inputStyle"
+                            value="{contractAwardReport1>/0/Zcom}"
+                            editable="false"
+                        />
+                    </FlexBox>
+                    <FlexBox id="_IDGenFlexBox9" class="headerItem" direction="Row" justifyContent="SpaceBetween">
+                        <Label
+                            id="_IDGenLabel8"
+                            class="labelStyle"
+                            text="Award Created By: "
+                        />
+                        <Input
+                            class="inputStyle"
+                            value="{contractAwardReport1>/0/AwrdCreatedBy}"
+                            editable="false"
+                        />
+                    </FlexBox>
+
+                    <FlexBox id="_IDGenFlexBox10" class="headerItem" direction="Row" justifyContent="SpaceBetween">
+                        <Label
+                            id="_IDGenLabel9"
+                            class="labelStyle"
+                            text="Award Created At: "
+                        />
+                        <Input
+                            class="inputStyle"
+                            value="{contractAwardReport1>/0/AwrdCreatedAt}"
+                            editable="false"
+                        />
+                    </FlexBox>
+
+                    <FlexBox id="_IDGenFlexBox11" class="headerItem" direction="Row" justifyContent="SpaceBetween">
+                        <Label
+                            id="_IDGenLabel10"
+                            class="labelStyle"
+                            text="Award Created On: "
+                        />
+                        <Input
+                            class="inputStyle"
+                            value="{contractAwardReport1>/0/AwrdCreatedOn}"
+                            editable="false"
+                        />
+                    </FlexBox>
+
+                   
+ 
+                </VBox>
+            </FlexBox>
+        </Panel>
+       
+
+        <footer>
+            <OverflowToolbar id="_IDGenOverflowToolbar2">
+                <ToolbarSpacer id="_IDGenToolbarSpacer2" />
+                <Button id="_IDGenButto" text="Close" press="oncancell" />
+            </OverflowToolbar>
+        </footer>
+    </Dialog>
+</core:FragmentDefinition>
